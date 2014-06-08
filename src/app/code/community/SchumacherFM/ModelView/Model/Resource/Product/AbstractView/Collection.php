@@ -49,7 +49,17 @@ abstract class SchumacherFM_ModelView_Model_Resource_Product_AbstractView_Collec
      */
     public function getSql()
     {
+        $this->_beforeLoad();
         return $this->getSelect()->__toString();
+    }
+
+    /**
+     * @return Varien_Db_Select
+     */
+    public function getFullSelect()
+    {
+        $this->_beforeLoad();
+        return $this->getSelect();
     }
 
     /**
