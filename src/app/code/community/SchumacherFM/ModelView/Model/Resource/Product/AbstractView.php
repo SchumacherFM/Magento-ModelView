@@ -13,6 +13,51 @@
 abstract class SchumacherFM_ModelView_Model_Resource_Product_AbstractView extends Mage_Catalog_Model_Resource_Product
 {
 
+    /**
+     * used for Mage::getModel('namespace/modelView)->load(id)
+     *
+     * @param Varien_Object $object
+     * @param mixed         $rowId
+     *
+     * @return Varien_Db_Select|Zend_Db_Select
+     * @throws InvalidArgumentException
+     */
+    protected function _getLoadRowSelect($object, $rowId)
+    {
+        if (false === ($object instanceof SchumacherFM_ModelView_Model_Product_AbstractView)) {
+            throw new InvalidArgumentException('$object must be an instance of SchumacherFM_ModelView_Model_Product_AbstractView');
+        }
+
+        /** @var $object SchumacherFM_ModelView_Model_Product_AbstractView */
+        $select = $object->getCollection()->getFullSelect();
+        $select->where('e.' . $this->getEntityIdField() . ' =?', $rowId);
+        return $select;
+    }
+
+    /**
+     * disabled
+     *
+     * @param Mage_Core_Model_Abstract $object
+     *
+     * @return $this|Mage_Eav_Model_Entity_Abstract
+     */
+    protected function _loadModelAttributes($object)
+    {
+        return $this;
+    }
+
+    /**
+     * disabled
+     *
+     * @param null $object
+     *
+     * @return $this|Mage_Eav_Model_Entity_Attribute_Abstract
+     */
+    public function loadAllAttributes($object = null)
+    {
+        return $this;
+    }
+
     protected function _beforeSave(Varien_Object $object)
     {
         Mage::throwException('Not supported!');
