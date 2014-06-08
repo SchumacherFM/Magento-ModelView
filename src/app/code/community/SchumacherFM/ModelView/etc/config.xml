@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SchumacherFM_ModelView>
+            <version>0.0.1</version>
+        </SchumacherFM_ModelView>
+    </modules>
+</config>

@@ -1,0 +1,16 @@
+{
+    "name": "schumacherfm/modelview",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "homepage": "https://github.com/SchumacherFM/Magento-ModelView",
+    "description": "Magento ModelView to simulate a database view in a model",
+    "authors": [
+        {
+            "name": "Cyrill Schumacher",
+            "email": "cyrill@schumacher.fm"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
