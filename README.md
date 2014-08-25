@@ -22,7 +22,7 @@ Installation Instructions
 1. Install modman from https://github.com/colinmollenhour/modman
 2. Switch to Magento root folder
 3. `modman init`
-4. `modman clone git://github.com/SchumacherFM/Magento-OpCache.git`
+4. `modman clone https://github.com/SchumacherFM/Magento-ModelView.git`
 
 Please read the great composer article from Vinai: [Composer installation](http://magebase.com/magento-tutorials/composer-with-magento/)
 
